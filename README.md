@@ -9,3 +9,4 @@ The structure of the formulas are simply additive as of now and intercept have t
 This repository builds on these other functions (in the links), which again may rely on other packages:
 https://github.com/cran/dismo/blob/master/R/gbm.step.R
 
+The libraries necessary to use each R file will be present in the code. :)
