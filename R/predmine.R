@@ -1,41 +1,42 @@
 #Predictor Mining function package:
 
-#Distributions supported:
-#Poisson
-#Binomial
-#Gaussian
-
-#Regressions supported:
+#Regression supported:
 #GLM
+
+
+#GLM - distributions supported:
+#Poisson
+#Binomial/Logistic
+#Gaussian
 
 ##Return values:
 #Something went wrong initially: "-1"
 #Something went wrong later on: "-2"
 ##If nothing went wrong then
-#A list will be returned.
+#A list will be returned with the following properties:
 #list[[1]] 				is the GBM object
 #list[[2]] 				is the GLM models fit.
-#list[[2]][[X]] 		is the GLM models fit with X+1 parameters.
-#list[[2]][[X]][[Y]] 	is the Y'th GLM model with X+1 parameters.
+#list[[2]][[X]] 			is the GLM models fit with X+1 parameters.
+#list[[2]][[X]][[Y]] 			is the Y'th GLM model with X+1 parameters.
 #list[[3]]				contains [number of models fit, number of models with 1 predictor, etc]
 #list[[4]]				contains all the AIC values - from which it is possible to find mean or median
 
 ##Input that need to be specified by the user:
 #gbm.x vector of coloumns	- for predictors to mine from
 #gbm.y number of coloumn 	- for response
-#family 		- a string that characterizes the distribution, check "Distributions supported". 
-#data 			- the desired dataframe
-#max.predict 	- the maximum number of predictors in the model.
-#max.models 	- the maximum number of models that can be fit.
-#influence.lim 	- the standardized value of the least satisfactory influence [0,1]
+#family 			- a string that characterizes the distribution, check "Distributions supported". 
+#data 				- the desired dataframe
+#max.predict 			- the maximum number of predictors in the model.
+#max.models 			- the maximum number of models that can be fit.
+#influence.lim 			- the standardized value of the least satisfactory influence [0,1]
 #				- "0" will simply plot all predictors in the model...
 #				- "1" will simply plot only the predictor with the most influence...
 
 ##Input that can be specified by the user:
-#regression 		- Specify to change regression type, "glm" default, no other options yet.
-#learning.rate		-
-#bag.fraction		-
-#tree.complexity 	-
+#regression 			- Specify to change regression type, "glm" default, no other options yet.
+#learning.rate			-
+#bag.fraction			-
+#tree.complexity 		-
 #max.trees			-
 #n.trees			-
 #n.folds			-
