@@ -1,4 +1,5 @@
 #Extra functions to predmine.R
+
 #Simplifying function
 #Function to retrieve all AIC values in order to make a histogram.
 plot.aic = function(predmine.obj,nclass = 30){
