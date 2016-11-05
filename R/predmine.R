@@ -3,7 +3,6 @@
 #Regression supported:
 #GLM
 
-
 #GLM - distributions supported:
 #Poisson
 #Binomial/Logistic
