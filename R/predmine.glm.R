@@ -204,7 +204,7 @@ predmine.glm = function(
 	
 	#Removing the gbm object if it is not desired, may take much space.
 	if(keep.gbm == FALSE){
-		rm(gbm.object)
+		gbm.object = NULL
 	}
 	
 	#Creating a finalized "object"/list containing everything
