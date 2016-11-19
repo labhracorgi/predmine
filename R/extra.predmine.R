@@ -8,9 +8,9 @@ plot.aic = function(predmine.obj,nclass = 30){
 		return("-1")
 	}
 	this.plot = hist(predmine.obj[[4]],
-					nclass = nclass,
-					main = "Histogram: Distribution of AIC",
-					xlab = "AIC values")
+			nclass = nclass,
+			main = "Histogram: Distribution of AIC",
+			lab = "AIC values")
 	return(this.plot)
 }
 
